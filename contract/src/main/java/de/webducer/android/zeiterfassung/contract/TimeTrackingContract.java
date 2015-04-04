@@ -238,9 +238,14 @@ public final class TimeTrackingContract {
       public final static String ACTION_RECORD_DATA_CHANGED = _BASE_PATH + ".ACTION_RECORD_CHANGED";
 
       /**
-       * Fired from content provoder after insert, update or delete of the project, address, time type or project time type data
+       * Fired from content provider after insert, update or delete of the project, address, time type or project time type data
        */
       public final static String ACTION_MASTER_DATA_CHANGED = _BASE_PATH + ".ACTION_MASTER_DATA_CHANGED";
+
+      /**
+       * Fired from content provider after insert, update or delete of the configuration data
+       */
+      public final static String ACTION_CONFIG_DATA_CHANGED = _BASE_PATH + ".ACTION_CONFIG_DATA_CHANGED";
    }
 
    /**
@@ -308,6 +313,7 @@ public final class TimeTrackingContract {
 
             /**
              * Configuration value data type column [INTEGER => ConfigDataType(Enumeration), Required]
+             * @see de.webducer.android.zeiterfassung.contract.enums.ConfigDataType
              * <dl>
              * <dt>0</dt>
              * <dd>Not Set</dd>
@@ -483,6 +489,7 @@ public final class TimeTrackingContract {
 
             /**
              * Kind of the time type [INTEGER => TimeKind(Enumeration), Required, Default 1]
+             * @see de.webducer.android.zeiterfassung.contract.enums.TimeKind
              * <dl>
              * <dt>1</dt>
              * <dd>WorkingTime</dd>

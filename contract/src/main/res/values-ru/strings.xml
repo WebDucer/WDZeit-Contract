@@ -24,8 +24,24 @@
   -->
 
 <resources>
+   <!-- Enum [DurationFormat] -->
    <string name="enum_duration_format_days_hours_minutes">Дни, часы и минуты (d HH:mm)</string>
    <string name="enum_duration_format_none">Не поставленно</string>
    <string name="enum_duration_format_hours_minutes">Часы и минуты (HH:mm)</string>
    <string name="enum_duration_format_minutes">Минуты (mm)</string>
+
+   <!-- Enum [ConfigDataType] -->
+   <string name="enum_config_data_type_not_set">Не поставленно</string>
+   <string name="enum_config_data_type_string">String</string>
+   <string name="enum_config_data_type_boolean">Boolean</string>
+   <string name="enum_config_data_type_integer">Integer (32 bit)</string>
+   <string name="enum_config_data_type_long">Long (64 bit)</string>
+   <string name="enum_config_data_type_double">Double (двойная точность)</string>
+   <string name="enum_config_data_type_float">Float (простая точность)</string>
+
+   <!-- Enum [TimeKind] -->
+   <string name="enum_time_kind_none">Не выбранно</string>
+   <string name="enum_time_kind_working_time">Рабочее время</string>
+   <string name="enum_time_kind_overtime">Сверхурочные</string>
+   <string name="enum_time_kind_holiday">Отпуск</string>
 </resources>

@@ -24,8 +24,24 @@
   -->
 
 <resources>
+   <!-- Enum [DurationFormat] -->
    <string name="enum_duration_format_days_hours_minutes">Tage, Stunden und Minuten (d HH:mm)</string>
    <string name="enum_duration_format_none">Nicht gesetzt</string>
    <string name="enum_duration_format_hours_minutes">Stunden und Minuten (HH:mm)</string>
    <string name="enum_duration_format_minutes">Minuten (mm)</string>
+
+   <!-- Enum [ConfigDataType] -->
+   <string name="enum_config_data_type_not_set">Nicht gesetzt</string>
+   <string name="enum_config_data_type_string">String</string>
+   <string name="enum_config_data_type_boolean">Boolean</string>
+   <string name="enum_config_data_type_integer">Integer (32 bit)</string>
+   <string name="enum_config_data_type_long">Long (64 bit)</string>
+   <string name="enum_config_data_type_double">Double (doppelte Genauigkeit)</string>
+   <string name="enum_config_data_type_float">Float (einfache Genauigkeit)</string>
+
+   <!-- Enum [TimeKind] -->
+   <string name="enum_time_kind_none">Nicht gesetzt</string>
+   <string name="enum_time_kind_working_time">Arbeitszeit</string>
+   <string name="enum_time_kind_overtime">Überstunden</string>
+   <string name="enum_time_kind_holiday">Urlaub</string>
 </resources>
