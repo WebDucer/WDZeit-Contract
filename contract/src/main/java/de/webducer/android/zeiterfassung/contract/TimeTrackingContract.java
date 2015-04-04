@@ -313,6 +313,7 @@ public final class TimeTrackingContract {
 
             /**
              * Configuration value data type column [INTEGER => ConfigDataType(Enumeration), Required]
+             *
              * @see de.webducer.android.zeiterfassung.contract.enums.ConfigDataType
              * <dl>
              * <dt>0</dt>
@@ -489,6 +490,7 @@ public final class TimeTrackingContract {
 
             /**
              * Kind of the time type [INTEGER => TimeKind(Enumeration), Required, Default 1]
+             *
              * @see de.webducer.android.zeiterfassung.contract.enums.TimeKind
              * <dl>
              * <dt>1</dt>
