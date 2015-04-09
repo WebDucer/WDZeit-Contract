@@ -58,37 +58,37 @@ public enum TimeKind implements ITranslatableEnum {
    Holiday(3, R.string.enum_time_kind_holiday);
 
    /* Private fields */
-   private final int _EnumCode;
-   private final int _EnumTranslationId;
-   private String _TranslatedValue = null;
+   private final int _enumCode;
+   private final int _enumTranslationId;
+   private String _translatedValue = null;
 
    /* Constructors */
    private TimeKind(int enumCode, int enumTranslationId) {
 
-      _EnumCode = enumCode;
-      _EnumTranslationId = enumTranslationId;
+      _enumCode = enumCode;
+      _enumTranslationId = enumTranslationId;
    }
 
    @Override
    public int getEnumCode() {
 
-      return _EnumCode;
+      return _enumCode;
    }
 
    @Override
    public int getTranslationId() {
 
-      return _EnumTranslationId;
+      return _enumTranslationId;
    }
 
    @Override
    public String getTranslatedValue(Context context) {
 
-      if (_TranslatedValue == null) {
-         _TranslatedValue = context.getString(_EnumTranslationId);
+      if (_translatedValue == null) {
+         _translatedValue = context.getString(_enumTranslationId);
       }
 
-      return _TranslatedValue;
+      return _translatedValue;
    }
 
    /**
@@ -97,7 +97,7 @@ public enum TimeKind implements ITranslatableEnum {
     * @param enumCode Enum code (eg. from data base)
     * @return Resolved enum value or 'None' if no match
     */
-   public final static TimeKind getTimeKindByCode(int enumCode) {
+   public static TimeKind getTimeKindByCode(int enumCode) {
 
       switch (enumCode) {
          case 1:
@@ -114,7 +114,7 @@ public enum TimeKind implements ITranslatableEnum {
       }
    }
 
-   public final static TimeKind[] getVisibleValues() {
+   public static TimeKind[] getVisibleValues() {
 
       return new TimeKind[] {WorkingTime, Overtime, Holiday};
    }

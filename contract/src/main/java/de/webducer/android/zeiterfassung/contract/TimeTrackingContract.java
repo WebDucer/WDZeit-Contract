@@ -246,6 +246,11 @@ public final class TimeTrackingContract {
        * Fired from content provider after insert, update or delete of the configuration data
        */
       public final static String ACTION_CONFIG_DATA_CHANGED = _BASE_PATH + ".ACTION_CONFIG_DATA_CHANGED";
+
+      /**
+       * Fired from content provider after insert, update or delete of the report data
+       */
+      public final static String ACTION_REPORT_DATA_CHANGED = _BASE_PATH + ".ACTION_REPORT_DATA_CHANGED";
    }
 
    /**
@@ -1299,7 +1304,7 @@ public final class TimeTrackingContract {
              * <dl>
              * <dt>SingleValue(1)</dt>
              * <dd>Report that returns only one value (such as sum, average, count of something)</dd>
-             * <dt>Listing(2)</dt>
+             * <dt>List(2)</dt>
              * <dd>Report that returns a list as result</dd>
              * </dl>
              */

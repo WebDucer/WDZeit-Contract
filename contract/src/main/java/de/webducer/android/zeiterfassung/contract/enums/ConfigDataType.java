@@ -73,14 +73,15 @@ public enum ConfigDataType implements ITranslatableEnum {
    Float(6, R.string.enum_config_data_type_float);
 
    /* Private fields */
-   private final int _EnumCode;
-   private final int _EnumTranslationId;
+   private final int _enumCode;
+   private final int _enumTranslationId;
+   private String _translatedValue = null;
 
    /* Constructors */
    private ConfigDataType(int enumCode, int enumTranslationId) {
 
-      _EnumCode = enumCode;
-      _EnumTranslationId = enumTranslationId;
+      _enumCode = enumCode;
+      _enumTranslationId = enumTranslationId;
    }
 
    /**
@@ -90,7 +91,7 @@ public enum ConfigDataType implements ITranslatableEnum {
     */
    public int getEnumCode() {
 
-      return _EnumCode;
+      return _enumCode;
    }
 
    /**
@@ -100,7 +101,7 @@ public enum ConfigDataType implements ITranslatableEnum {
     */
    public int getTranslationId() {
 
-      return _EnumTranslationId;
+      return _enumTranslationId;
    }
 
    /**
@@ -111,7 +112,11 @@ public enum ConfigDataType implements ITranslatableEnum {
     */
    public String getTranslatedValue(Context context) {
 
-      return context.getString(_EnumTranslationId);
+      if (_translatedValue == null) {
+         _translatedValue = context.getString(_enumTranslationId);
+      }
+
+      return _translatedValue;
    }
 
    /**

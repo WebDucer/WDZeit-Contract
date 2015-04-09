@@ -49,4 +49,9 @@
    <string name="enum_pause_definition_type_none">Nicht gesetzt</string>
    <string name="enum_pause_definition_type_time_based">Zeitbasiert</string>
    <string name="enum_pause_definition_type_duration_based">Dauerbasiert</string>
+
+   <!-- Enum [ReportType] -->
+   <string name="enum_report_type_none">Nicht gesetzt</string>
+   <string name="enum_report_type_single_value">Einzelwert</string>
+   <string name="enum_report_type_list">Auflistung</string>
 </resources>

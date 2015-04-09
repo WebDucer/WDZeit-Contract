@@ -54,37 +54,38 @@ public enum DurationFormat implements ITranslatableEnum {
    private final static String _DURATION_HOUR_MINUTES_FORMAT_STRING = "%s%02d:%02d";
    private final static String _DURATION_DAYS_HOUR_MINUTES_FORMAT_STRING = "%s%01d %02d:%02d";
    private final static String _MINUS = "-";
-   private final int _EnumCode;
-   private final int _EnumTranslationId;
-   private String _TranslatedValue = null;
+   
+   private final int _enumCode;
+   private final int _enumTranslationId;
+   private String _translatedValue = null;
 
    /* Constructors */
    private DurationFormat(int enumCode, int enumTranslationId) {
 
-      _EnumCode = enumCode;
-      _EnumTranslationId = enumTranslationId;
+      _enumCode = enumCode;
+      _enumTranslationId = enumTranslationId;
    }
 
    @Override
    public int getEnumCode() {
 
-      return _EnumCode;
+      return _enumCode;
    }
 
    @Override
    public int getTranslationId() {
 
-      return _EnumTranslationId;
+      return _enumTranslationId;
    }
 
    @Override
    public String getTranslatedValue(Context context) {
 
-      if (_TranslatedValue == null) {
-         _TranslatedValue = context.getString(_EnumTranslationId);
+      if (_translatedValue == null) {
+         _translatedValue = context.getString(_enumTranslationId);
       }
 
-      return _TranslatedValue;
+      return _translatedValue;
    }
 
    /**

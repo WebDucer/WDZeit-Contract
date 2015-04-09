@@ -50,4 +50,9 @@
    <string name="enum_pause_definition_type_none">Not Set</string>
    <string name="enum_pause_definition_type_time_based">Time Based</string>
    <string name="enum_pause_definition_type_duration_based">Duration Based</string>
+
+   <!-- Enum [ReportType] -->
+   <string name="enum_report_type_none">Not Set</string>
+   <string name="enum_report_type_single_value">Single Value</string>
+   <string name="enum_report_type_list">List</string>
 </resources>

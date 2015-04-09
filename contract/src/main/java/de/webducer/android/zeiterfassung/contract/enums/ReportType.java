@@ -29,26 +29,26 @@ import android.content.Context;
 import de.webducer.android.zeiterfassung.contract.R;
 
 /**
- * Enumeration for the pause definition type
+ * Enumeration for the report type
  *
  * @author WebDucer - IT & Internet Service
- * @version 0.2
- * @category Enumeration, Content Provider, Contracts
+ * @version 0.1
+ * @category Enumeartion, Content Provider, Contracts
  * @since 2015-04-09
  */
-public enum PauseDefinitionType implements ITranslatableEnum {
+public enum ReportType implements ITranslatableEnum {
    /**
     * Not defined
     */
-   None(0, R.string.enum_pause_definition_type_none),
+   None(0, R.string.enum_report_type_none),
    /**
-    * Time based pause definition
+    * Single value reports
     */
-   TimeBased(1, R.string.enum_pause_definition_type_time_based),
+   SingleValue(1, R.string.enum_report_type_single_value),
    /**
-    * Duration based pause definition
+    * List reports
     */
-   DurationBased(2, R.string.enum_pause_definition_type_duration_based);
+   List(2, R.string.enum_report_type_list);
 
    /* Private fields */
    private final int _enumCode;
@@ -56,7 +56,7 @@ public enum PauseDefinitionType implements ITranslatableEnum {
    private String _translatedValue = null;
 
    /* Constructors */
-   private PauseDefinitionType(int enumCode, int enumTranslationId) {
+   private ReportType(int enumCode, int enumTranslationId) {
 
       _enumCode = enumCode;
       _enumTranslationId = enumTranslationId;
@@ -90,28 +90,28 @@ public enum PauseDefinitionType implements ITranslatableEnum {
     * @param enumCode Enum code (eg. from data base)
     * @return Resolved enum value or 'None' if no match
     */
-   public static PauseDefinitionType getPauseDefinitionTypeByCode(int enumCode) {
+   public static ReportType getReportTypeByCode(int enumCode) {
 
       switch (enumCode) {
          case 1:
-            return TimeBased;
+            return SingleValue;
 
          case 2:
-            return DurationBased;
+            return List;
 
          default:
             return None;
       }
    }
 
-   public static PauseDefinitionType[] getVisibleValues() {
+   public static ReportType[] getVisibleValues() {
 
-      return new PauseDefinitionType[] {TimeBased, DurationBased};
+      return new ReportType[] {SingleValue, List};
    }
 
    @Override
    public ITranslatableEnum getByEnumCode(int enumCode) {
 
-      return getPauseDefinitionTypeByCode(enumCode);
+      return getReportTypeByCode(enumCode);
    }
 }

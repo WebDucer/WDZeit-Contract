@@ -49,4 +49,9 @@
    <string name="enum_pause_definition_type_none">Не поставленно</string>
    <string name="enum_pause_definition_type_time_based">На основе времени</string>
    <string name="enum_pause_definition_type_duration_based">На основе продолжительности</string>
+
+   <!-- Enum [ReportType] -->
+   <string name="enum_report_type_none">Не поставленно</string>
+   <string name="enum_report_type_single_value">Single Value</string>
+   <string name="enum_report_type_list">List</string>
 </resources>
