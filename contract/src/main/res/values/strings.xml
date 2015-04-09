@@ -45,4 +45,9 @@
    <string name="enum_time_kind_working_time">Working Time</string>
    <string name="enum_time_kind_overtime">Overtime</string>
    <string name="enum_time_kind_holiday">Holiday</string>
+
+   <!-- Enum [PauseDefinitionType] -->
+   <string name="enum_pause_definition_type_none">Not Set</string>
+   <string name="enum_pause_definition_type_time_based">Time Based</string>
+   <string name="enum_pause_definition_type_duration_based">Duration Based</string>
 </resources>

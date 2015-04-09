@@ -44,4 +44,9 @@
    <string name="enum_time_kind_working_time">Arbeitszeit</string>
    <string name="enum_time_kind_overtime">Überstunden</string>
    <string name="enum_time_kind_holiday">Urlaub</string>
+
+   <!-- Enum [PauseDefinitionType] -->
+   <string name="enum_pause_definition_type_none">Nicht gesetzt</string>
+   <string name="enum_pause_definition_type_time_based">Zeitbasiert</string>
+   <string name="enum_pause_definition_type_duration_based">Dauerbasiert</string>
 </resources>

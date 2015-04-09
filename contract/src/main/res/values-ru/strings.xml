@@ -44,4 +44,9 @@
    <string name="enum_time_kind_working_time">Рабочее время</string>
    <string name="enum_time_kind_overtime">Сверхурочные</string>
    <string name="enum_time_kind_holiday">Отпуск</string>
+
+   <!-- Enum [PauseDefinitionType] -->
+   <string name="enum_pause_definition_type_none">Не поставленно</string>
+   <string name="enum_pause_definition_type_time_based">На основе времени</string>
+   <string name="enum_pause_definition_type_duration_based">На основе продолжительности</string>
 </resources>

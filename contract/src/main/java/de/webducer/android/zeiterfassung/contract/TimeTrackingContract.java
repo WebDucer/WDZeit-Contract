@@ -921,6 +921,10 @@ public final class TimeTrackingContract {
             public final static String DISPLAY_NAME = "pttpd_display_name";
 
             /**
+             * ID of the assigned project
+             */
+            public final static String PROJECT_ID = "pj_id";
+            /**
              * Name of the assigned project
              */
             public final static String PROJECT_NAME = "pj_name";
@@ -934,6 +938,11 @@ public final class TimeTrackingContract {
              * Active flag of the assigned project
              */
             public final static String PROJECT_ACTIVE = "pj_active";
+
+            /**
+             * ID of the assigned time type
+             */
+            public final static String TIME_TYPE_ID = "tt_id";
 
             /**
              * Kind of the assigned time type [INTEGER => TimeKind(Enumeration)]
@@ -1007,7 +1016,7 @@ public final class TimeTrackingContract {
             /**
              * All available columns for the query
              */
-            public final static String[] ALL_QUERY_COLUMNS = concatArrays(ALL_COLUMNS, DISPLAY_NAME, PROJECT_NAME, PROJECT_DESCRIPTION, PROJECT_ACTIVE, TIME_TYPE_KIND, TIME_TYPE_NAME, TIME_TYPE_DESCRIPTION, TIME_TYPE_ACTIVE, PAUSE_TYPE, PAUSE_START_TIME, PAUSE_END_TIME, TRACKED_TIME, PAUSE_DURATION, PAUSE_COMMENT, PAUSE_ACTIVE);
+            public final static String[] ALL_QUERY_COLUMNS = concatArrays(ALL_COLUMNS, DISPLAY_NAME, PROJECT_ID, PROJECT_NAME, PROJECT_DESCRIPTION, PROJECT_ACTIVE, TIME_TYPE_ID, TIME_TYPE_KIND, TIME_TYPE_NAME, TIME_TYPE_DESCRIPTION, TIME_TYPE_ACTIVE, PAUSE_TYPE, PAUSE_START_TIME, PAUSE_END_TIME, TRACKED_TIME, PAUSE_DURATION, PAUSE_COMMENT, PAUSE_ACTIVE);
          }
 
          /**
