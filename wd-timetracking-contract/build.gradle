@@ -27,7 +27,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 // Version of the module
-version = "0.4.2"
+version = "0.4.2-beta1"
 
 android {
    compileSdkVersion 22
@@ -60,6 +60,7 @@ dependencies {
 // Maven variables
 def siteUrl = 'https://bitbucket.org/WebDucer/wdzeitapp-contract/wiki/Home'
 def gitUrl = 'https://WebDucer@bitbucket.org/WebDucer/wdzeitapp-contract.git'
+def issuesUrl = 'https://bitbucket.org/WebDucer/wdzeitapp-contract/issues'
 group = "de.webducer.android"
 
 install {
@@ -72,7 +73,7 @@ install {
             artifactId 'wd-timetracking-contract'
 
             // Add your description here
-            name 'Contract for the android app "WebDucer Time Tracking"'
+            name 'Contract for the android app WebDucer Time Tracking'
             url siteUrl
 
             // Set your license
@@ -127,13 +128,17 @@ bintray {
    user = properties.getProperty("bintray.user")
    key = properties.getProperty("bintray.apikey")
 
+
    configurations = ['archives']
    pkg {
       repo = "WD-Android-Libraries"
       name = "WDZeit-Contract"
+      issueTrackerUrl = issuesUrl
       websiteUrl = siteUrl
       vcsUrl = gitUrl
       licenses = ["MIT"]
+      labels = ['Android', 'WebDucer', 'WebDucer Zeiterfassung', 'Contract', 'WebDucer time Tracking']
       publish = true
+      publicDownloadNumbers = true
    }
 }
