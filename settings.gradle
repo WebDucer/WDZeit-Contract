@@ -22,4 +22,4 @@
  * SOFTWARE.
  */
 
-include ':contract'
+include ':wd-timetracking-contract'
