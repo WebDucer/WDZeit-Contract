@@ -32,6 +32,13 @@ import java.util.Locale;
 import de.webducer.android.zeiterfassung.contract.Constants;
 import de.webducer.android.zeiterfassung.contract.R;
 
+/**
+ * Enumeration for the duration format
+ *
+ * @author WebDucer - IT &amp; Internet Service
+ * @version 0.2
+ * @since 2015-04-04
+ */
 public enum DurationFormat implements ITranslatableEnum {
    /**
     * Format not set

@@ -31,9 +31,8 @@ import de.webducer.android.zeiterfassung.contract.R;
 /**
  * Enumeration for the time kind
  *
- * @author WebDucer - IT & Internet Service
+ * @author WebDucer - IT &amp; Internet Service
  * @version 0.2
- * @category Enumeration, Content Provider, Contracts
  * @since 2015-04-04
  */
 public enum ConfigDataType implements ITranslatableEnum {

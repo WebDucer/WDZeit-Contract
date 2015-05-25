@@ -31,9 +31,8 @@ import de.webducer.android.zeiterfassung.contract.R;
 /**
  * Enumeration for the report type
  *
- * @author WebDucer - IT & Internet Service
+ * @author WebDucer - IT &amp; Internet Service
  * @version 0.1
- * @category Enumeartion, Content Provider, Contracts
  * @since 2015-04-09
  */
 public enum ReportType implements ITranslatableEnum {

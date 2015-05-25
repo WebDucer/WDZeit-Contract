@@ -35,7 +35,7 @@ import java.util.Locale;
 /**
  * Contract for the content provider of the app
  *
- * @author WebDucer - IT & Internet Service
+ * @author WebDucer - IT &amp; Internet Service
  * @version 0.4
  * @since 2015-02-23
  */
@@ -317,7 +317,7 @@ public final class TimeTrackingContract {
             public final static String KEY = "cfg_key";
 
             /**
-             * Configuration value data type column [INTEGER => ConfigDataType(Enumeration), Required]
+             * Configuration value data type column [INTEGER =&gt; ConfigDataType(Enumeration), Required]
              *
              * @see de.webducer.android.zeiterfassung.contract.enums.ConfigDataType
              * <dl>
@@ -345,12 +345,12 @@ public final class TimeTrackingContract {
             public final static String VALUE = "cfg_value";
 
             /**
-             * Configuration active column [INTEGER => BOOL (0: FALSE, 1: TRUE), Required, Default 1]
+             * Configuration active column [INTEGER =&gt; BOOL (0: FALSE, 1: TRUE), Required, Default 1]
              */
             public final static String ACTIVE = "cfg_active";
 
             /**
-             * Configuration visibility column [INTEGER => BOOL (0: FALSE, 1: TRUE), Required, Default 1]
+             * Configuration visibility column [INTEGER =&gt; BOOL (0: FALSE, 1: TRUE), Required, Default 1]
              */
             public final static String VISIBLE = "cfg_visible";
 
@@ -431,7 +431,7 @@ public final class TimeTrackingContract {
             public final static String COUNTRY = "ad_country";
 
             /**
-             * Address is selectable on the UI [INTEGER => BOOL (0: FALSE, 1: TRUE), Required, Default 1 on insert]
+             * Address is selectable on the UI [INTEGER =&gt; BOOL (0: FALSE, 1: TRUE), Required, Default 1 on insert]
              */
             public final static String ACTIVE = "ad_active";
 
@@ -494,7 +494,7 @@ public final class TimeTrackingContract {
          public static interface Columns extends BaseColumns {
 
             /**
-             * Kind of the time type [INTEGER => TimeKind(Enumeration), Required, Default 1]
+             * Kind of the time type [INTEGER =&gt; TimeKind(Enumeration), Required, Default 1]
              *
              * @see de.webducer.android.zeiterfassung.contract.enums.TimeKind
              * <dl>
@@ -529,7 +529,7 @@ public final class TimeTrackingContract {
             public final static String TIME_FACTOR = "tt_time_factor";
 
             /**
-             * Time type is selectable on the UI [INTEGER => BOOL (0: FALSE, 1: TRUE), Required, Default 1]
+             * Time type is selectable on the UI [INTEGER =&gt; BOOL (0: FALSE, 1: TRUE), Required, Default 1]
              */
             public final static String ACTIVE = "tt_active";
 
@@ -606,7 +606,7 @@ public final class TimeTrackingContract {
             public final static String DESCRIPTION = "pj_desc";
 
             /**
-             * Project is selectable on the UI [INTEGER => BOOL (0: FALSE, 1: TRUE), Required, Default 1]
+             * Project is selectable on the UI [INTEGER =&gt; BOOL (0: FALSE, 1: TRUE), Required, Default 1]
              */
             public final static String ACTIVE = "pj_active";
 
@@ -743,7 +743,7 @@ public final class TimeTrackingContract {
             public final static String PROJECT_ACTIVE = "pj_active";
 
             /**
-             * Kind of the assigned time type [INTEGER => TimeKind(Enumeration)]
+             * Kind of the assigned time type [INTEGER =&gt; TimeKind(Enumeration)]
              * <dl>
              * <dt>1</dt>
              * <dd>WorkingTime</dd>
@@ -766,7 +766,7 @@ public final class TimeTrackingContract {
             public final static String TIME_TYPE_DESCRIPTION = "tt_desc";
 
             /**
-             * Active flag of the assigned time type [INTEGER => BOOL (0: FALSE, 1: TRUE)]
+             * Active flag of the assigned time type [INTEGER =&gt; BOOL (0: FALSE, 1: TRUE)]
              */
             public final static String TIME_TYPE_ACTIVE = "tt_active";
 
@@ -810,12 +810,12 @@ public final class TimeTrackingContract {
          public static interface Columns extends BaseColumns {
 
             /**
-             * Pause type [INTEGER => PauseType(Enumeration), Required, Default 1]
+             * Pause type [INTEGER =&gt; PauseType(Enumeration), Required, Default 1]
              * <dl>
              * <dt>1</dt>
              * <dd>TimeBased: Based on time of the day (e.g.: pause between 11:00 and 11:30)</dd>
              * <dt>2</dt>
-             * <dd>DurationBased: Based on the tracked time duration (e.g.: tracked time duration is 8 hours => 30 min pause)</dd>
+             * <dd>DurationBased: Based on the tracked time duration (e.g.: tracked time duration is 8 hours =&gt; 30 min pause)</dd>
              * </dl>
              */
             public final static String PAUSE_TYPE = "pd_pause_type";
@@ -846,7 +846,7 @@ public final class TimeTrackingContract {
             public final static String COMMENT = "pd_comment";
 
             /**
-             * Project is selectable on the UI [INTEGER => BOOL (0: FALSE, 1: TRUE), Required, Default 1]
+             * Project is selectable on the UI [INTEGER =&gt; BOOL (0: FALSE, 1: TRUE), Required, Default 1]
              */
             public final static String ACTIVE = "pd_active";
 
@@ -856,7 +856,7 @@ public final class TimeTrackingContract {
             public final static String[] ALL_COLUMNS = {_ID, PAUSE_TYPE, START_TIME, END_TIME, TRACKED_TIME, PAUSE_DURATION, COMMENT, ACTIVE};
          }
 
-         public static interface QueryColumns extends Columns {
+         public interface QueryColumns extends Columns {
 
             /**
              * Assigned Project Time Types
@@ -950,7 +950,7 @@ public final class TimeTrackingContract {
             public final static String TIME_TYPE_ID = "tt_id";
 
             /**
-             * Kind of the assigned time type [INTEGER => TimeKind(Enumeration)]
+             * Kind of the assigned time type [INTEGER =&gt; TimeKind(Enumeration)]
              * <dl>
              * <dt>1</dt>
              * <dd>WorkingTime</dd>
@@ -973,17 +973,17 @@ public final class TimeTrackingContract {
             public final static String TIME_TYPE_DESCRIPTION = "tt_desc";
 
             /**
-             * Active flag of the assigned time type [INTEGER => BOOL (0: FALSE, 1: TRUE)]
+             * Active flag of the assigned time type [INTEGER =&gt; BOOL (0: FALSE, 1: TRUE)]
              */
             public final static String TIME_TYPE_ACTIVE = "tt_active";
 
             /**
-             * Pause type [INTEGER => PauseType(Enumeration), Required, Default 1]
+             * Pause type [INTEGER =&gt; PauseType(Enumeration), Required, Default 1]
              * <dl>
              * <dt>1</dt>
              * <dd>TimeBased: Based on time of the day (e.g.: pause between 11:00 and 11:30)</dd>
              * <dt>2</dt>
-             * <dd>DurationBased: Based on the tracked time duration (e.g.: tracked time duration is 8 hours => 30 min pause)</dd>
+             * <dd>DurationBased: Based on the tracked time duration (e.g.: tracked time duration is 8 hours =&gt; 30 min pause)</dd>
              * </dl>
              */
             public final static String PAUSE_TYPE = "pd_pause_type";
@@ -1014,7 +1014,7 @@ public final class TimeTrackingContract {
             public final static String PAUSE_COMMENT = "pd_comment";
 
             /**
-             * Project is selectable on the UI [INTEGER => BOOL (0: FALSE, 1: TRUE), Required, Default 1]
+             * Project is selectable on the UI [INTEGER =&gt; BOOL (0: FALSE, 1: TRUE), Required, Default 1]
              */
             public final static String PAUSE_ACTIVE = "pd_active";
 
@@ -1300,7 +1300,7 @@ public final class TimeTrackingContract {
          public static interface Columns extends BaseColumns {
 
             /**
-             * Type of the report [INTEGER => ReportType(Enumeration), Default 2]
+             * Type of the report [INTEGER =&gt; ReportType(Enumeration), Default 2]
              * <dl>
              * <dt>SingleValue(1)</dt>
              * <dd>Report that returns only one value (such as sum, average, count of something)</dd>
@@ -1373,7 +1373,7 @@ public final class TimeTrackingContract {
             public final static String AVAILABLE_FILTER = "rp_available_filter";
 
             /**
-             * Active flag for the report [INTEGER => BOOLEAN (0: FALSE, 1: TRUE), Default 1]
+             * Active flag for the report [INTEGER =&gt; BOOLEAN (0: FALSE, 1: TRUE), Default 1]
              */
             public final static String ACTIVE = "rp_active";
 
@@ -1532,7 +1532,7 @@ public final class TimeTrackingContract {
             public final static String CAPTION = "st_caption";
 
             /**
-             * Format of the duration [INTEGER => DurationFormat(Enumeration), Required, Default 1]
+             * Format of the duration [INTEGER =&gt; DurationFormat(Enumeration), Required, Default 1]
              * <dl>
              * <dt>1</dt>
              * <dd>Hours and minutes: HH:mm (e.g.: 02:15 or 40:30)</dd>
@@ -1647,7 +1647,7 @@ public final class TimeTrackingContract {
             public final static String ORDER = "st_order";
 
             /**
-             * Format of the duration [INTEGER => DurationFormat(Enumeration), Required, Default 1]
+             * Format of the duration [INTEGER =&gt; DurationFormat(Enumeration), Required, Default 1]
              * <dl>
              * <dt>1</dt>
              * <dd>Hours and minutes: HH:mm (e.g.: 02:15 or 40:30)</dd>

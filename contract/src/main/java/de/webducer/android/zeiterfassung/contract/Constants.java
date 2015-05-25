@@ -24,6 +24,13 @@
 
 package de.webducer.android.zeiterfassung.contract;
 
+/**
+ * Constants for the module
+ *
+ * @author WebDucer - IT &amp; Internet Service
+ * @version 0.2
+ * @since 2015-04-04
+ */
 public final class Constants {
    /**
     * Empty string value
