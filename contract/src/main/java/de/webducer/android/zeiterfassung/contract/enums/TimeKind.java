@@ -26,48 +26,43 @@ package de.webducer.android.zeiterfassung.contract.enums;
 
 import android.content.Context;
 
-import java.text.NumberFormat;
-import java.util.Locale;
-
-import de.webducer.android.zeiterfassung.contract.Constants;
 import de.webducer.android.zeiterfassung.contract.R;
 
 /**
- * Enumeration for the duration format
+ * Enumeration for the time kind
  *
  * @author WebDucer - IT &amp; Internet Service
  * @version 0.2
  * @since 2015-04-04
  */
-public enum DurationFormat implements ITranslatableEnum {
+public enum TimeKind implements ITranslatableEnum {
    /**
-    * Format not set
+    * Time Kind is not defined
     */
-   None(0, R.string.enum_duration_format_none),
+   None(0, R.string.enum_time_kind_none),
+
    /**
-    * Hours and minutes (e.g.: 09:15, 45:30)
+    * Time Kind for working time
     */
-   HoursMinutes(1, R.string.enum_duration_format_hours_minutes),
+   WorkingTime(1, R.string.enum_time_kind_working_time),
+
    /**
-    * Days, hours and minutes (e.g.: 0 07:30, 5 17:22)
+    * Time Kind for overtime
     */
-   DaysHoursMinutes(2, R.string.enum_duration_format_days_hours_minutes),
+   Overtime(2, R.string.enum_time_kind_overtime),
+
    /**
-    * Minutes (e.g.: 30, 3.562)
+    * Time Kind for holiday and vacation
     */
-   Minutes(3, R.string.enum_duration_format_minutes);
+   Holiday(3, R.string.enum_time_kind_holiday);
 
    /* Private fields */
-   private final static String _DURATION_HOUR_MINUTES_FORMAT_STRING = "%s%02d:%02d";
-   private final static String _DURATION_DAYS_HOUR_MINUTES_FORMAT_STRING = "%s%01d %02d:%02d";
-   private final static String _MINUS = "-";
-   
    private final int _enumCode;
    private final int _enumTranslationId;
    private String _translatedValue = null;
 
    /* Constructors */
-   private DurationFormat(int enumCode, int enumTranslationId) {
+   private TimeKind(int enumCode, int enumTranslationId) {
 
       _enumCode = enumCode;
       _enumTranslationId = enumTranslationId;
@@ -96,59 +91,36 @@ public enum DurationFormat implements ITranslatableEnum {
    }
 
    /**
-    * Get string representation of duration
-    *
-    * @param duration in minutes
-    * @return String representation
-    */
-   public String format(int duration) {
-      int absMinutes = Math.abs(duration);
-
-      switch (this) {
-         case DaysHoursMinutes:
-            int days = absMinutes / Constants.MINUTES_IN_A_DAY;
-            int hours = (absMinutes % Constants.MINUTES_IN_A_DAY) / Constants.MINUTES_IN_A_HOUR;
-            return String.format(Locale.getDefault(), _DURATION_DAYS_HOUR_MINUTES_FORMAT_STRING, duration < 0 ? _MINUS : Constants.EMPTY, days, hours, absMinutes % Constants.MINUTES_IN_A_HOUR);
-
-         case HoursMinutes:
-            return String.format(Locale.getDefault(), _DURATION_HOUR_MINUTES_FORMAT_STRING, duration < 0 ? _MINUS : Constants.EMPTY, absMinutes / Constants.MINUTES_IN_A_HOUR, absMinutes % Constants.MINUTES_IN_A_HOUR);
-
-         default:
-            return NumberFormat.getInstance().format(duration);
-      }
-   }
-
-   /**
     * Get Enum value by given enum code
     *
     * @param enumCode Enum code (eg. from data base)
     * @return Resolved enum value or 'None' if no match
     */
-   public static DurationFormat getDurationFormatByCode(int enumCode) {
+   public static TimeKind getTimeKindByCode(int enumCode) {
 
       switch (enumCode) {
          case 1:
-            return HoursMinutes;
+            return WorkingTime;
 
          case 2:
-            return DaysHoursMinutes;
+            return Overtime;
 
          case 3:
-            return Minutes;
+            return Holiday;
 
          default:
             return None;
       }
    }
 
-   public static DurationFormat[] getVisibleValues() {
+   public static TimeKind[] getVisibleValues() {
 
-      return new DurationFormat[] {DaysHoursMinutes, HoursMinutes, Minutes};
+      return new TimeKind[] {WorkingTime, Overtime, Holiday};
    }
 
    @Override
    public ITranslatableEnum getByEnumCode(int enumCode) {
 
-      return getDurationFormatByCode(enumCode);
+      return getTimeKindByCode(enumCode);
    }
 }

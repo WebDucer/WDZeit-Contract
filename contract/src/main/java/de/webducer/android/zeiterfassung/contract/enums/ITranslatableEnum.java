@@ -26,6 +26,13 @@ package de.webducer.android.zeiterfassung.contract.enums;
 
 import android.content.Context;
 
+/**
+ * Interface for enums with translation resource
+ *
+ * @author WebDucer - IT &amp; Internet Service
+ * @version 0.2
+ * @since 2015-04-04
+ */
 public interface ITranslatableEnum {
    /**
     * Get int representation of the value (eg. for DB)

@@ -30,4 +30,29 @@
    <string name="enum_duration_format_hours_minutes">Hours and Minutes (HH:mm)</string>
    <string name="enum_duration_format_days_hours_minutes">Days, Hours and Minutes (d HH:mm)</string>
    <string name="enum_duration_format_minutes">Minutes (mm)</string>
+
+   <!-- Enum [ConfigDataType] -->
+   <string name="enum_config_data_type_not_set">Not set</string>
+   <string name="enum_config_data_type_string">String</string>
+   <string name="enum_config_data_type_boolean">Boolean</string>
+   <string name="enum_config_data_type_integer">Integer (32 bit)</string>
+   <string name="enum_config_data_type_long">Long (64 bit)</string>
+   <string name="enum_config_data_type_double">Double (double precision)</string>
+   <string name="enum_config_data_type_float">Float (single precision)</string>
+
+   <!-- Enum [TimeKind] -->
+   <string name="enum_time_kind_none">Not Set</string>
+   <string name="enum_time_kind_working_time">Working Time</string>
+   <string name="enum_time_kind_overtime">Overtime</string>
+   <string name="enum_time_kind_holiday">Holiday</string>
+
+   <!-- Enum [PauseDefinitionType] -->
+   <string name="enum_pause_definition_type_none">Not Set</string>
+   <string name="enum_pause_definition_type_time_based">Time Based</string>
+   <string name="enum_pause_definition_type_duration_based">Duration Based</string>
+
+   <!-- Enum [ReportType] -->
+   <string name="enum_report_type_none">Not Set</string>
+   <string name="enum_report_type_single_value">Single Value</string>
+   <string name="enum_report_type_list">List</string>
 </resources>
