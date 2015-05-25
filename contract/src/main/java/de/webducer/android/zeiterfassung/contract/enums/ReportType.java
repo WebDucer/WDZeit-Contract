@@ -26,48 +26,36 @@ package de.webducer.android.zeiterfassung.contract.enums;
 
 import android.content.Context;
 
-import java.text.NumberFormat;
-import java.util.Locale;
-
-import de.webducer.android.zeiterfassung.contract.Constants;
 import de.webducer.android.zeiterfassung.contract.R;
 
 /**
- * Enumeration for the duration format
+ * Enumeration for the report type
  *
  * @author WebDucer - IT &amp; Internet Service
- * @version 0.2
- * @since 2015-04-04
+ * @version 0.1
+ * @since 2015-04-09
  */
-public enum DurationFormat implements ITranslatableEnum {
+public enum ReportType implements ITranslatableEnum {
    /**
-    * Format not set
+    * Not defined
     */
-   None(0, R.string.enum_duration_format_none),
+   None(0, R.string.enum_report_type_none),
    /**
-    * Hours and minutes (e.g.: 09:15, 45:30)
+    * Single value reports
     */
-   HoursMinutes(1, R.string.enum_duration_format_hours_minutes),
+   SingleValue(1, R.string.enum_report_type_single_value),
    /**
-    * Days, hours and minutes (e.g.: 0 07:30, 5 17:22)
+    * List reports
     */
-   DaysHoursMinutes(2, R.string.enum_duration_format_days_hours_minutes),
-   /**
-    * Minutes (e.g.: 30, 3.562)
-    */
-   Minutes(3, R.string.enum_duration_format_minutes);
+   List(2, R.string.enum_report_type_list);
 
    /* Private fields */
-   private final static String _DURATION_HOUR_MINUTES_FORMAT_STRING = "%s%02d:%02d";
-   private final static String _DURATION_DAYS_HOUR_MINUTES_FORMAT_STRING = "%s%01d %02d:%02d";
-   private final static String _MINUS = "-";
-   
    private final int _enumCode;
    private final int _enumTranslationId;
    private String _translatedValue = null;
 
    /* Constructors */
-   private DurationFormat(int enumCode, int enumTranslationId) {
+   private ReportType(int enumCode, int enumTranslationId) {
 
       _enumCode = enumCode;
       _enumTranslationId = enumTranslationId;
@@ -96,59 +84,33 @@ public enum DurationFormat implements ITranslatableEnum {
    }
 
    /**
-    * Get string representation of duration
-    *
-    * @param duration in minutes
-    * @return String representation
-    */
-   public String format(int duration) {
-      int absMinutes = Math.abs(duration);
-
-      switch (this) {
-         case DaysHoursMinutes:
-            int days = absMinutes / Constants.MINUTES_IN_A_DAY;
-            int hours = (absMinutes % Constants.MINUTES_IN_A_DAY) / Constants.MINUTES_IN_A_HOUR;
-            return String.format(Locale.getDefault(), _DURATION_DAYS_HOUR_MINUTES_FORMAT_STRING, duration < 0 ? _MINUS : Constants.EMPTY, days, hours, absMinutes % Constants.MINUTES_IN_A_HOUR);
-
-         case HoursMinutes:
-            return String.format(Locale.getDefault(), _DURATION_HOUR_MINUTES_FORMAT_STRING, duration < 0 ? _MINUS : Constants.EMPTY, absMinutes / Constants.MINUTES_IN_A_HOUR, absMinutes % Constants.MINUTES_IN_A_HOUR);
-
-         default:
-            return NumberFormat.getInstance().format(duration);
-      }
-   }
-
-   /**
     * Get Enum value by given enum code
     *
     * @param enumCode Enum code (eg. from data base)
     * @return Resolved enum value or 'None' if no match
     */
-   public static DurationFormat getDurationFormatByCode(int enumCode) {
+   public static ReportType getReportTypeByCode(int enumCode) {
 
       switch (enumCode) {
          case 1:
-            return HoursMinutes;
+            return SingleValue;
 
          case 2:
-            return DaysHoursMinutes;
-
-         case 3:
-            return Minutes;
+            return List;
 
          default:
             return None;
       }
    }
 
-   public static DurationFormat[] getVisibleValues() {
+   public static ReportType[] getVisibleValues() {
 
-      return new DurationFormat[] {DaysHoursMinutes, HoursMinutes, Minutes};
+      return new ReportType[] {SingleValue, List};
    }
 
    @Override
    public ITranslatableEnum getByEnumCode(int enumCode) {
 
-      return getDurationFormatByCode(enumCode);
+      return getReportTypeByCode(enumCode);
    }
 }
